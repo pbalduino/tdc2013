@@ -40,6 +40,15 @@
       overflow: visible;
       max-height: none;
     }
+
+    span.red {
+      color: red;
+      font-size: 1.2em;
+    }
+
+    .reveal li.grow {
+      line-height: 1.8em;
+    }
   </style>
 
   <body>
@@ -52,8 +61,10 @@
           <h1>JavaScript for Pros</h1>
           <hr />
           <h3>TDC 2013</h3>
+          <h5>São Paulo - 10/Jul/2013</h5>
+          <hr />
           <p>
-            <small><a href="http://about.me/pbalduino">Plínio Balduino</a> / <a href="http://twitter.com/balduino">@p_balduino</a></small>
+            <a href="http://about.me/pbalduino">Plínio Balduino</a> / <a href="http://twitter.com/p_balduino">@p_balduino</a>
           </p>
         </section>
 
@@ -77,9 +88,23 @@
           <section>
             <h2>Misconceptions</h2>
             <hr />
-            <h3 class="fragment">Not Java</h3>
-            <h3 class="fragment">Not a toy language</h3>
-            <h3 class="fragment">Not web only</h3>
+            <h3 class="fragment grow">Not Java</h3>
+            <h3 class="fragment grow">Not a toy language</h3>
+            <h3 class="fragment grow">Not web only</h3>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Rules of thumb</h2>
+            <hr />
+            <ol>
+            <li class="fragment grow">The clause <code>var</code> is not optional. <span class="red">Use it.</span></li>
+            <li class="fragment grow">Sometimes <code>;</code> can be optional. <span class="red">Use it.</span></li>
+            <li class="fragment grow">Prefer <code><span class="red">===</span></code> and <code><span class="red">!==</span></code> over <code>==</code> and <code>!=</code></li>
+            <li class="fragment grow">Don't blame the tool.</li>
+            </ol>
+            
           </section>
         </section>
 
@@ -92,10 +117,10 @@
         <section>
           <h2>Definition</h2>
           <hr />
-          <h3 class="fragment">Dynamic</h3>
-          <h3 class="fragment">Object-oriented</h3>
-          <h3 class="fragment">Prototipe-based</h3>
-          <h3 class="fragment">Functional</h3>
+          <h3 class="fragment grow">Dynamic</h3>
+          <h3 class="fragment grow">Object-oriented</h3>
+          <h3 class="fragment grow">Prototipe-based</h3>
+          <h3 class="fragment grow">Functional</h3>
           <h3 class="fragment">Very flexible</h3>
           </ul>
         </section>
@@ -295,7 +320,7 @@ bomDia("Nicolau");</code></pre>
 
 } catch(err) {
 
-  console.log("I caught an error: ", err.description);
+  console.log("Ooops: ", err.description);
 
 };</code></pre>
       	</section>
