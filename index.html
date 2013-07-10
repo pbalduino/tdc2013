@@ -155,7 +155,7 @@ rex.bark();</code></pre>
             <img src="img/inheritance.png" height="400">
           </section>
           <section>
-            <pre><code class="javascript">function Animal() {
+            <pre><code data-trim class="javascript">function Animal() {
   this.breath() {
     console.log("I'm breathing");
   }
@@ -172,7 +172,36 @@ function Fish() {
 }
 Dog.prototype = new Animal();
 Fish.prototype = new Animal();</code></pre>
-            
+          </section>
+
+          <section>
+            <h2>Multiple inheritance</h2>
+            <img src="img/multiple.png" height="400">
+          </section>
+          <section>
+            <h2>Mixin</h2>
+            <pre><code data-trim class="javascript">function Bubbles() {
+  this.bubble() {
+    console.log("Making bubbles");
+  }
+}</code></pre>
+          </section>
+          <section>
+            <h2>Mixin</h2>
+            <pre><code data-trim class="javascript">Object.prototype.includes = function (constructor) {
+  var obj = new constructor();
+  for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      this.prototype[prop] = obj[prop];
+    }
+  }
+};
+
+Fish.includes(Bubbles);
+var fish = new Fish();
+
+fish.bubble();
+            </code></pre>
           </section>
 
         </section>
